@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link rel="stylesheet" href="C:\Users\User\Desktop\BUSINESS WEBSITE\CSS PAGE.css">
+ 
+  <style>
+    
+    .slideshow-container {
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .services-slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .service-card {
+      flex: 0 0 auto;
+      width: 300px;
+      padding: 20px;
+      margin: 0 10px;
+      border: 1px solid #ccc;
+      background-color: azure;
+    }
+    
+    body {
+      background-image: url('../'); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center; 
+      background-color: azure;
+    }
+    
+    .container2 {
+      margin: 0 auto;
+      width: 80%; 
+    }
+  </style>
+ 
+</head>
+<link rel="stylesheet" href="../services .css">
+<body class="container2">
+    <header>
+        <nav>
+          <ul>
+            <li><a href="C:\Users\User\Desktop\BUSINESS WEBSITE\HOME PAGE.html">Home</a></li>
+            <li><a href="C:\Users\User\Desktop\BUSINESS WEBSITE\ABOUT US PAGE.html">About Us</a></li>
+            <li><a href="C:\Users\User\Desktop\BUSINESS WEBSITE\CONTACT PAGE.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+  <div class="container2">
+    <h1>Our Services</h1>
+
+    <div class="slideshow-container">
+      <div class="services-slides">
+        <div class="service-card">
+            <img src="c:\Users\User\Downloads\auto-hero-2-1200x675.jpg" style="width:50%">
+          <h2>Service 1</h2>
+          <p>Apart from oil, your vehicle relies on a variety of other fluids to function efficiently.</p>
+          <p> These include transmission fluid, brake fluid, coolant,</p>
+          <p> power steering fluid, and windshield washer fluid. </p>
+        </div>
+
+        <div class="service-card">
+            <img src="c:\Users\User\Downloads\pr-automotive-service-technician-600x400.jpg" style="width:50%">
+          <h2>Service 2</h2>
+          <p>Perform basic care and maintenance, including changing oil, checking fluid levels, and rotating tires.</p>
+          <p> Repair or replace worn parts, such as brake pads, wheel bearings, and sensors.</p>
+        </div>
+
+        <div class="service-card">
+          <img src="c:\Users\User\Downloads\auto-repair-san-diego.jpg" style="width:50%">
+          <h2>Service 3</h2>
+          <p>Although service technicians work on traditional mechanical systems, such as engines,</p>
+          <p> transmissions, and drivebelts, they also must be familiar with a growing number of electronic systems.</p>
+          <p> Braking, transmission, and steering systems, for example, are controlled primarily by computers and electronic components.</p>
+        </div>
+        <!-- Add more service cards as needed -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for the moving slideshow
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var slides = document.querySelectorAll('.service-card');
+      var slideWidth = slides[0].offsetWidth;
+      var totalWidth = slideWidth * slides.length;
+
+      if (slideIndex >= slides.length) {
+        slideIndex = 0;
+      }
+
+      var slidePosition = -slideIndex * slideWidth;
+      document.querySelector('.services-slides').style.transform = 'translateX(' + slidePosition + 'px)';
+
+      slideIndex++;
+      setTimeout(showSlides, 3000); // Change slide every 3 seconds
+    }
+  </script>
+
+<footer>
+    &copy; RITZ AUTOMOTIVE MECHANIC 2024 
+</footer>
+
+</body>
+</html>
